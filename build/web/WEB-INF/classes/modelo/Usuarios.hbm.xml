@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 20/11/2017 14:15:24 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="modelo.Usuarios" table="usuarios" catalog="hidrosolution" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="nome" type="string">
+            <column name="nome" length="50" />
+        </property>
+        <property name="sobrenome" type="string">
+            <column name="sobrenome" length="50" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="30" unique="true" />
+        </property>
+        <property name="senha" type="string">
+            <column name="senha" length="10" />
+        </property>
+        <property name="endereco" type="string">
+            <column name="endereco" length="50" />
+        </property>
+        <property name="complemento" type="string">
+            <column name="complemento" length="50" />
+        </property>
+        <property name="cidade" type="string">
+            <column name="cidade" length="30" />
+        </property>
+        <property name="estado" type="string">
+            <column name="estado" length="2" />
+        </property>
+        <property name="cep" type="java.lang.Integer">
+            <column name="cep" />
+        </property>
+        <property name="perfil" type="java.lang.Integer">
+            <column name="perfil" />
+        </property>
+    </class>
+</hibernate-mapping>
